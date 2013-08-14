@@ -18,7 +18,6 @@ namespace GBPreference.UI.Web
         {
             AreaRegistration.RegisterAllAreas();
 
-            // Another Branch from me
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
