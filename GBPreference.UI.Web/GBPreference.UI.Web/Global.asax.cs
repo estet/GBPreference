@@ -17,7 +17,7 @@ namespace GBPreference.UI.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            //Dima pisal etot fix ;s
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
