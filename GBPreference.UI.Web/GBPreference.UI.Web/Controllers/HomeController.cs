@@ -28,5 +28,10 @@ namespace GBPreference.UI.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Start()
+        {
+            return View();
+        }
     }
 }

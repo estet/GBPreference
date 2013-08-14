@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Start";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="@Url.Content("~/Scripts/jquery-1.8.2.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")"></script>
+    <script src="@Url.Content("~/Scripts/knockout-2.2.0.js")"></script>
+<input type="text" data-bind="value : Message"/>
+<div data-bind="text: Message">
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var model = new StartModel();
+        ko.applyBindings(model);
+    });
+    
+    function StartModel() {
+        var self = this;
+        self.Message = ko.observable("Message");
+        self.Message.subscribe(function(obj) {
+            console.log(obj);
+        });
+    };
+</script>
